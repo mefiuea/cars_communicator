@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    # local
+    'cars_communicator_app.apps.CarsCommunicatorAppConfig',
 ]
 
 MIDDLEWARE = [
@@ -74,9 +77,16 @@ WSGI_APPLICATION = "config.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    # "default": {
+    #     "ENGINE": "django.db.backends.sqlite3",
+    #     "NAME": BASE_DIR / "db.sqlite3",
+    # }
+    'default': {
+        'HOST': '127.0.0.1',
+        'NAME': 'cars_db',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'USER': 'mk_user',
+        'PASSWORD': '1234',
     }
 }
 
