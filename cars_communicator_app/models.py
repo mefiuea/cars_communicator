@@ -97,7 +97,7 @@ class RegisteredCars(models.Model):
 #     email = models.EmailField(
 #         max_length=100, unique=True, verbose_name='email')
 #     phone_number = models.CharField(
-#         max_length=17, unique=True, blank=True, validators=[phone_regex])
+#         max_length=17, unique=True, blank=False, validators=[phone_regex])
 #     cars = models.ManyToManyField(
 #         'RegisteredCars', related_name='user_registeredcars')
 #     is_email_verified = models.BooleanField(default=False)
